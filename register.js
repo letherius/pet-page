@@ -1,41 +1,50 @@
+let petSalon ={
 
-
-let pets = [
-    {
-    name:"Steel",
-    age:5,
-    gender:"Male",
-    service:"Bath"
-},
-
-{
-    name:"Hulk",
-    age:3,
-    gender:"Male",
-    service:"Teeth Cleaning"
-},
-
-{
-    name:"Lucky",
-    age:10,
-    gender:"Male",
-    service:"Nail Trimming"
+    name: "The Fashion Pet",
+    phone:"777-777-777",
+    address:{
+        country:"Mex",
+        city:"Tijuana",
+        street:"University",
+        number:"263-k",
+        zip:"22141"
+    },
+    pets:[]
 }
-
-];
-//FOR LOOP: start point; stopping condition; increment
-//length return the number of elements in the array
-for(let i=0; i<pets.length; i++) {
-console.log(pets[i].name);
-console.log(pets[i].age);
-console.log(pets[i].gender);
-console.log(pets[i].service);
+//----------these are the arguements (local vars)------>
+function Pet(name, age, gender, breed, service, owner, phone){
+    //the real attributes are the next:
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+    this.breed = breed;
+    this.service = service;
+    this.ownerName = owner;
+    this.contactPhone = phone;
 }
+let scooby = new Pet("Scooby", 59, "Male", "Dane", "Grooming","Shaggy",
+"777-777-777");
+let Theri = new Pet("Theri", 20, "Male", "Dane", "Grooming","Shaggy",
+"777-777-777");
+
+petSalon.pets.push(scooby,Theri);
+
+let inputName=document.getElementById("txtName");
+let inputAge=document.getElementById("txtAge");
+let inputGender=document.getElementById("txtGender");
+
+function register(){
+    console.log(inputName.value, inputAge.value, inputGender.value);
+}
+let thePet = new Pet(inputName.value, inputAge.value, inputGender.value);
+
+console.log(thePet);
+petSalon.pets.push(thePet);
 
 
-
-//brute force solution
-//console.log(students[0]);
-////console.log(students[1]);
-//console.log(students[2]);
-//console.log(students[3]);
+function displayPetNames(){
+    for(i=0;i<petSalon.pets.length;i++){
+        console.log(petSalon.pets[i].name);
+    }
+    alert(`The pet salon has ${petSalon.pets.length} registered.`)
+}
