@@ -59,6 +59,7 @@ function init(){
     petSalon.pets.push(Scooby,Scrappy);
     displayNumberOfPets();
     displayPetCards(); 
+    displayPetsTable();
 }
 
 window.onload = init;
