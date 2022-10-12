@@ -11,6 +11,14 @@
     padding:10px;
 }
 
-.table{
-    
+.container{
+    background-color:burlywood
+}
+
+.img-frame{
+    height: 32px;
+    margin-right: 30px;
+}
+.img-frame2{
+    height: 32px;
 }
