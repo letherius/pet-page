@@ -10,7 +10,7 @@ tmp+=`
         <p>Gender: ${aPet.gender}</p>
         <p>Breed: ${aPet.breed}</p>
         <p>Service: ${aPet.service}</p>
-        <button class="btn btn-danger" onclick="deletePet(aPet.id);">Delete</button>
+        <button class="btn btn-danger" onclick="deletePet(${aPet.id});">Delete</button>
     </div>
     `;
 }

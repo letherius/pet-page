@@ -34,13 +34,26 @@ let inputGender=document.getElementById("txtGender");
 let inputBreed=document.getElementById("txtBreed");
 let selectService=document.getElementById("selService");
 
+function isValid(newPet){
+    let valid=true;
+    if(newPet.service==""){
+        valid=false;
+    }
+    return valid;
+}
+
 function register(){
 let thePet = new Pet(inputName.value, inputAge.value, inputGender.value, inputBreed.value, selectService.value);
+
+if(isValid(thePet)==true){
 petSalon.pets.push(thePet);
-}
 displayPetCards();
-displayNumberOfPets(); 
 clearInputs();
+displayNumberOfPets(); 
+}else{
+    alert("Enter a service");
+  }
+}
 
 
 function clearInputs(){
