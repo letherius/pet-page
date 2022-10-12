@@ -13,6 +13,7 @@ let petSalon ={
 }
 
 //CONSTRUCTOR
+let count=0;
 //----------these are the arguements (local vars)------>
 function Pet(name, age, gender, breed, service, owner, phone){
     //the real attributes are the next:
@@ -23,6 +24,7 @@ function Pet(name, age, gender, breed, service, owner, phone){
     this.service = service;
     this.ownerName = owner;
     this.contactPhone = phone;
+    this.id=count++;
 }
 
 
@@ -51,6 +53,20 @@ function clearInputs(){
 function displayNumberOfPets(){
     document.getElementById("numberOfPets").innerHTML=`We have ${petSalon.pets.length} pets in the system.`;
 }
+
+function deletePet(petID){
+    let deleteIndex;
+    for(let i=0;i<petSalon.pets.length;i++){
+        let aPet = petSalon.pets[i];
+        if(aPet.id==petID){
+            deleteIndex=i;
+            console.log("The deleted pet is in the position" + deleteIndex);
+        }
+    }
+    petSalon.pets.splice(deleteIndex,1);
+    document.getElementById(petID).remove();
+    displayNumberOfPets();
+}
 function init(){
     let Scooby = new Pet("Scooby", 59, "Male", "Dane", "Grooming","Shaggy",
     "777-777-777");
@@ -59,7 +75,7 @@ function init(){
     petSalon.pets.push(Scooby,Scrappy);
     displayNumberOfPets();
     displayPetCards(); 
-    displayPetsTable();
+    
 }
 
 window.onload = init;
