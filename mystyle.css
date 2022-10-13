@@ -22,3 +22,20 @@
 .img-frame2{
     height: 32px;
 }
+.footer{
+    background-color: burlywood;
+}
+.contact-icon{
+margin-top: 500px;
+}
+.contact-icon i{
+font-size: 30px;
+margin: 30px;
+}
+.contact-icon1{
+    margin-top: 20px;
+}
+.contact-icon1 i{
+    font-size: 30px;
+    margin: 30px;
+}
