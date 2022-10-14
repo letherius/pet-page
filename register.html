@@ -37,7 +37,7 @@
        <!--here we will add the input fields-->
        <div>
        <div class="mb-3">
-        <label class="form-label">Name:</label>
+        <label>Name:</label>
         <input class="form-control" type="text" 
         id="txtName">
        </div>
@@ -68,6 +68,17 @@
         </select>
       </div>
 
+      <Div class="mb-3">
+        <label>Owner</label>
+        <input class="form-control" type="text"
+        id="txtOwner">
+        </div>
+
+        <Div class="mb-3">
+          <label>Phone</label>
+          <input class="form-control" type="number"
+          id="txtNumber">
+          </div>
 
 
       <button class="btn btn-dark" onclick="register();">Register</button>
@@ -80,7 +91,6 @@
       <table id="petTable" class="table table-bordered">
         <thead class="table-dark">
         <tr>
-          <th scope="col">#</th>
           <th scope="col">Name</th>
           <th scope="col">Age</th>
           <th scope="col">Gender</th>
@@ -88,7 +98,6 @@
           <th scope="col">Service</th>
           <th scope="col">Owner</th>
           <th scope="col">Phone</th>
-          <th scope="col">Delete</th>
         </tr>
         </thead>
         <tbody id="tbody">

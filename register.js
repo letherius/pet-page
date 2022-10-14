@@ -22,8 +22,8 @@ function Pet(name, age, gender, breed, service, owner, phone){
     this.gender = gender;
     this.breed = breed;
     this.service = service;
-    this.ownerName = owner;
-    this.contactPhone = phone;
+    this.owner = owner;
+    this.phone = phone;
     this.id=count++;
 }
 
@@ -33,6 +33,8 @@ let inputAge=document.getElementById("txtAge");
 let inputGender=document.getElementById("txtGender");
 let inputBreed=document.getElementById("txtBreed");
 let selectService=document.getElementById("selService");
+let inputOwner=document.getElementById("txtOwner");
+let inputPhone=document.getElementById("txtPhone");
 
 function isValid(newPet){
     let valid=true;
@@ -43,7 +45,7 @@ function isValid(newPet){
 }
 
 function register(){
-let thePet = new Pet(inputName.value, inputAge.value, inputGender.value, inputBreed.value, selectService.value);
+let thePet = new Pet(inputName.value, inputAge.value, inputGender.value, inputBreed.value, selectService.value, inputOwner.value, inputPhone.value);
 
 if(isValid(thePet)==true){
 petSalon.pets.push(thePet);
@@ -62,6 +64,8 @@ function clearInputs(){
     inputGender.value="";
     inputBreed.value="";
     selectService.value="";
+    inputOwner.value="";
+    inputPhone.value="";
 }
 function displayNumberOfPets(){
     document.getElementById("numberOfPets").innerHTML=`We have ${petSalon.pets.length} pets in the system.`;
@@ -85,7 +89,8 @@ function init(){
     "777-777-777");
     let Scrappy = new Pet("Scrappy", 20, "Male", "Dane", "Grooming","Shaggy",
     "777-777-777");
-    petSalon.pets.push(Scooby,Scrappy);
+    let Steel = new Pet("Steel", 20, "Male", "Bulldog", "Nails", "Kurt", "777-777-777");
+    petSalon.pets.push(Scooby,Scrappy,Steel);
     displayNumberOfPets();
     displaypetTable()
      
