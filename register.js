@@ -47,9 +47,9 @@ let thePet = new Pet(inputName.value, inputAge.value, inputGender.value, inputBr
 
 if(isValid(thePet)==true){
 petSalon.pets.push(thePet);
-displayPetCards();
 clearInputs();
 displayNumberOfPets(); 
+displaypetTable()
 }else{
     alert("Enter a service");
   }
@@ -87,7 +87,8 @@ function init(){
     "777-777-777");
     petSalon.pets.push(Scooby,Scrappy);
     displayNumberOfPets();
-    displayPetCards(); 
+    displaypetTable()
+     
     
 }
 

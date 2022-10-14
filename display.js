@@ -18,19 +18,21 @@ petsDiv.innerHTML = tmp;
 }
 
 function displaypetTable(){
-let petTable = document.getElementById("petTable");
+let petsDiv = document.getElementById("tbody");
 let tmp="";
 for(let i=0; i<petSalon.pets.length;i++){
 let aPet = petSalon.pets[i];
 tmp+=`
-    <table id="${aPet.id}" class="table table-bordered">
-        <p>Name: ${aPet.name} </p>
-        <p>Age: ${aPet.age} </p>
-        <p>Gender: ${aPet.gender}</p>
-        <p>Breed: ${aPet.breed}</p>
-        <p>Service: ${aPet.service}</p>
+    <tr id="${aPet.id}" class="table table-bordered">
+        <td>Name: ${aPet.name} </td>
+        <td>Age: ${aPet.age} </td>
+        <td>Gender: ${aPet.gender}</td>
+        <td>Breed: ${aPet.breed}</td>
+        <td>Service: ${aPet.service}</td>
+        </tr>
         <button class="btn btn-danger" onclick="deletePet(${aPet.id});">Delete</button>
     </div>
     `;
 }
+petsDiv.innerHTML = tmp;
 }
