@@ -13,7 +13,7 @@
     <h1 class="display-1">The Fashion Pet</h1>
 
     
-
+<div class="nav-menu" >
     <ul class="nav justify-content-end ">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="home.html">Home</a>
@@ -29,12 +29,14 @@
         </li>
       </ul>
     </header>
+  </div> 
 
+  <div class="top-register">
       <main class="container">
         <h2>Register</h2>
         <p id="numberOfPets" class="alert alert-dark">Display the number of pets</p>
-
-       <!--here we will add the input fields-->
+      
+       
        <div>
        <div class="mb-3">
         <label>Name:</label>
@@ -58,7 +60,7 @@
         <input class="form-control" type="text"
         id="txtBreed">
         </div>
-      <div>
+      <div class="mb-3">
         <label>Service:</label>
         <select class="form-select" id="selService">
           <option value="" disabled selected>---Select an option---</option>
@@ -80,8 +82,9 @@
           id="txtNumber">
           </div>
 
-
+        
       <button class="btn btn-dark" onclick="register();">Register</button>
+        
       </div>
       <div id="pets">
 
@@ -103,7 +106,12 @@
         <tbody id="tbody">
           <!--add the pets-->
         </tbody>
-      </table>
+       </table>
+       <nav class="contact-icon">
+        <a href="#"><i class="fa-regular fa-envelope"></i> Email:RollTide@gmail.com</a> 
+        <a href="#"><i class="fa-solid fa-phone"></i> Phone:281-330-8004</a>
+        <a href="#"><i class="fa-solid fa-fax"></i> Fax:281-330-8000</a>
+     </nav>
       
 
        <!--pets cards/ table tables-->
@@ -111,7 +119,7 @@
        <script src="display.js"></script>
        <script src="register.js"></script>
        
-      
+       
 
 </body>
 </html>
