@@ -31,7 +31,7 @@
 }
 
 .contact-icon{
-margin-top: 500px;
+margin-top: 200px;
 }
 
 .contact-icon i{
@@ -72,4 +72,12 @@ box-shadow: inset 0 0 0 0 var(gold);
 }
 .nav-link{
     color: #dedede;
+}
+
+.font{
+    font-weight: bold;
+}
+
+.grooming-font{
+    font-size: 20px;
 }
